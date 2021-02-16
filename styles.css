@@ -65,6 +65,36 @@ i{
 i:hover{
     color: steelblue;
 }
+#modal{
+    display: none !important;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-color: white;
+    border: 6px solid steelblue;
+    transition: .4s linear;
+}
+#modal .modalLinks{
+    align-self: center;
+    list-style-type: none;
+}
+.close{
+    display: inline-block;
+    align-self: flex-end;
+    font-size: 2.4rem;
+    padding: .5rem;
+    color: red;
+    font-weight: 600;
+}
 .help,.about, .how, .contact{
     background: url(./images/img1.jpg);
     background-color: rgba(0,0,0,.3);
@@ -304,7 +334,8 @@ a:hover{
         display: block;
         margin-right: 1.5rem;
     }
-    .menu button{
+    .menu a{
+        display: inline-block;
         padding: 8px 12px;
         margin-top: 8px;
         background-color: steelblue;
@@ -313,6 +344,12 @@ a:hover{
         border-radius: 6px;
         font-size: 1rem;
         outline: none;
+    }
+    #modal{
+        display: none;
+    }
+    #modal:target{
+        display: flex !important;
     }
     .introWrapper{
         width: 90%;
